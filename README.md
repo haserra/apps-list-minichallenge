@@ -45,14 +45,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 The Angular app consists of the following components
 - App Component : root tree component
-- Categories Component : responsible for rendering the categories on the left navigation bar . It allows filtering the list of apps by category
-- ApplistComponent: responsible for rendering  the apps (all of them or filtered by category). It also includes pagination and a search bar that provides  a search as-you-type functionality 
-- AppItemComponnet : Applist Component its child’s – responsible for rendering the Apps Details as described in JSON file
+- Categories Component : responsible for rendering the categories on the left navigation bar . It allows filtering the list of apps by category.
+- ApplistComponent: responsible for rendering  the apps (all of them or filtered by category). It also includes pagination and a search bar that provides  a search as-you-type functionality.
+- AppItemComponnet : Applist Component its child’s – responsible for rendering the Apps Details as described in JSON file.
 - TdAppService: It works as a layer across all the components of the tree providing services that retrieve data from the Mock server.
 
 ## Features/ Functionalities
 - List all the apps – Done – When the app starts or when the user clicks “All categories”.
-- Paginate the list (page size = 3) – Done.  Pagination is working when all categories have been listed or filtered . In either case  if the number of apps retrieved from the server is greater or equal to 3 than all the 3 pages will be made available.   Please check the algorithm chosen to implement this
+- Paginate the list (page size = 3) – Done.  Pagination is working when all categories have been listed or filtered . In either case  if the number of apps retrieved from the server is greater or equal to 3 than all the 3 pages will be made available.   Please check the algorithm chosen to implement this.
 - Filter the apps as you type in the search bar – Done. Search as-you-type works when all the apps have been retrieved or filtered.
 - Have all the existing categories in the left navigation sorted by alphabetic order - Done
 - Allow filtering of apps when we click on a category - Done
