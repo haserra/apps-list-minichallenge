@@ -22,5 +22,5 @@
     <li [class.active]="selectedPage === 2"><a href="#" (click)="loadpage(2)" *ngIf="appsPerPage > 0">2</a><span *ngIf="appsPerPage === 0">2</span></li>
     <li [class.active]="selectedPage === 3"><a href="#" (click)="loadpage(3)" *ngIf="appsPerPage > 0">3</a><span *ngIf="appsPerPage === 0">3</span></li>
     <li><a href="#" (click)="loadpage(currentPage  + 1)" *ngIf="selectedPage < 3 && appsPerPage > 0">&gt;</a><span *ngIf="selectedPage === 3 || appsPerPage === 0">&gt;</span></li>
-  </ul>
+  </ul>  
 </section>

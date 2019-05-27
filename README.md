@@ -14,7 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - Node.js (and npm ) should be  installed.
 
-- Install all modules listed as dependencies in package.json 
+- Install all modules listed as dependencies in package.json (including JSON Server)
 	> npm install
 
 - Start JSON Server
