@@ -1,0 +1,33 @@
+<div class="app-item">
+  <div class="box-info">
+    <div class="box-info--content">
+      <div class="description">
+        <h1>{{app.name}} </h1>
+        <p>{{app.description}}</p>
+      </div>
+      <div class="tags">
+        <span *ngFor="let category of app.categories; let num = index">
+          {{category}}
+          <span *ngIf="num < app.categories.length -1 "> / </span>
+        </span>
+      </div>
+    </div>
+    <div class="box-info--footer">
+      <ul>
+        <li *ngFor="let subscriptionPlan of app.subscriptions; let num = index">
+          <span>{{subscriptionPlan.name}}</span>
+          <h3 *ngIf="subscriptionPlan.price > 0; else freeTrial">
+            {{subscriptionPlan.price}}
+            <sup>€</sup>
+          </h3>
+          <ng-template #freeTrial>
+            <h3>
+              Free
+              <sup></sup>
+            </h3>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

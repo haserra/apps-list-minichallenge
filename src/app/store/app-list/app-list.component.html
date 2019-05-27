@@ -1,0 +1,26 @@
+<section class="apps-list">
+  <header>
+    <input name="searchBox"
+           type="text"
+           [(ngModel)]="searchString"
+           placeholder="Search by App"
+           (keyup)="search()">
+  </header>
+  <ul>
+    <li *ngFor="let app of currentPageApps; let num = index">
+        <app-app-item  [app]="app">
+
+        </app-app-item>           
+    </li>    
+    <li *ngIf="currentPageApps.length === 0">        
+            No apps matching that criteria.        
+    </li>
+  </ul>
+  <ul class="pagination" *ngIf="currentPageApps.length > 0">
+    <li><a href="#" (click)="loadpage(currentPage -1)" *ngIf="selectedPage > 1">&lt;</a><span *ngIf="selectedPage === 1">&lt;</span></li>
+    <li [class.active]="selectedPage === 1"><a href="#" (click)="loadpage(1)" *ngIf="appsPerPage > 0">1</a><a *ngIf="appsPerPage === 0">1</a></li>
+    <li [class.active]="selectedPage === 2"><a href="#" (click)="loadpage(2)" *ngIf="appsPerPage > 0">2</a><span *ngIf="appsPerPage === 0">2</span></li>
+    <li [class.active]="selectedPage === 3"><a href="#" (click)="loadpage(3)" *ngIf="appsPerPage > 0">3</a><span *ngIf="appsPerPage === 0">3</span></li>
+    <li><a href="#" (click)="loadpage(currentPage  + 1)" *ngIf="selectedPage < 3 && appsPerPage > 0">&gt;</a><span *ngIf="selectedPage === 3 || appsPerPage === 0">&gt;</span></li>
+  </ul>
+</section>

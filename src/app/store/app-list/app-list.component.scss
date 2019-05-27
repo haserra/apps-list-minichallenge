@@ -1,0 +1,96 @@
+  .apps-list {
+    flex: 1;
+    order: 2;
+    text-align: left;
+    padding: 15px;   
+  }
+
+  header {
+    display: flex;
+    text-align: center;
+  }
+
+  input[type=search],
+  input[type=text] {
+    font-size: 1rem;
+    font-weight: 300;
+    background-clip: padding-box;
+    transition: all .2s ease;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+    border: 1px solid var(--gray);
+    margin-bottom: 2rem;
+  }
+  
+  input:hover, input:focus {
+    transition: all .2s ease;
+    cursor: auto;
+    border: 1px solid var(--teal);
+  }  
+
+  ul {
+    list-style-type: none;
+  }
+
+/*Pagination*/
+.pagination {
+  text-align: center;
+  order: 3;
+}
+
+.pagination {
+  width: 100%;
+}
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0;
+  justify-content: center;
+}
+
+.pagination li {
+  margin-right: .25rem;
+}
+
+.pagination li:last-child {
+  margin-right: 0;
+}
+
+.pagination li a {
+  transition: all 0.3s ease-in-out;
+  color: var(--gray-dark);
+  padding: .375rem .4375rem;
+  text-decoration: none;
+}
+
+.pagination li a:hover {
+  background: var(--teal);
+  color: var(--white)
+}
+
+.pagination li a:focus {
+  box-shadow: inset 0 0 0 2px var(--teal);
+}
+
+.pagination li a:active {
+  background: var(--gray-dark);
+  color: var(--white);
+}
+
+.pagination .active a {
+  background: var(--teal);
+  color: var(--white);
+  pointer-events: none;
+}
+
+.pagination li span {
+  color: var(--silver);
+  padding: .375rem .4375rem;
+  text-decoration: none;
+}
+  

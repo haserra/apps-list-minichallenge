@@ -1,0 +1,8 @@
+<nav class="nav-categories">
+  <h2>Categories</h2>
+  <ul class="nav-menu">
+    <li *ngFor="let category of categories" [class.active]="category === selectedCategory">
+      <a href="#" (click)="filterCategory(category)"> {{category}}</a>
+    </li>
+  </ul>
+</nav>
